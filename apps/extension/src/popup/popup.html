@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunto</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">Sunto</h1>
+      <span class="tagline">Your Twitter/X Digest</span>
+    </header>
+
+    <!-- Loading state -->
+    <div id="loading" class="section">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+
+    <!-- Logged out state -->
+    <div id="logged-out" class="section" style="display: none;">
+      <p class="description">
+        Save tweets and get AI-powered summaries delivered to your digest.
+      </p>
+      <button id="login-btn" class="btn btn-primary">
+        Log in to Sunto
+      </button>
+    </div>
+
+    <!-- Logged in state -->
+    <div id="logged-in" class="section" style="display: none;">
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-value" id="unread-count">-</span>
+          <span class="stat-label">Unread</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="total-count">-</span>
+          <span class="stat-label">Total</span>
+        </div>
+      </div>
+
+      <a href="https://sunto.app" target="_blank" class="btn btn-primary">
+        Open Digest
+      </a>
+
+      <div class="instructions">
+        <p><strong>How to capture:</strong></p>
+        <p>Hover over any tweet and click the bookmark button in the top-right corner.</p>
+      </div>
+
+      <button id="logout-btn" class="btn btn-text">
+        Log out
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="https://sunto.app/help" target="_blank">Help</a>
+      <span>•</span>
+      <a href="https://sunto.app/privacy" target="_blank">Privacy</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
